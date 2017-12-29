@@ -74,10 +74,21 @@
 									<option>28</option>
 									<option>29</option>
 									<option>30</option>
+									<option>31</option>
 
 
 								</select>
 								<select name="year">
+									<option>1980</option>
+									<option>1981</option>
+									<option>1982</option>
+									<option>1983</option>
+									<option>1984</option>
+									<option>1985</option>
+									<option>1986</option>
+									<option>1987</option>
+									<option>1988</option>
+									<option>1989</option>
 									<option>1990</option>
 									<option>1991</option>
 									<option>1992</option>
