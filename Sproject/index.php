@@ -1,3 +1,9 @@
+<?php
+if(isset($_POST['submit']))
+	
+mail($_POST["email"], 'Registration Success', 'Thanks for registering with digitized info wall','From: digitizedinfowall@gmail.com');
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -69,22 +75,23 @@
         <div class="sform">
           <div class="signupBox">
             <h2>SignUp</h2>
-            <form>
+            <form action = "signin.php" method = "post">
               <label for="regNo">University Reg.No:</label>
-              <input id="regNo" type="text" name="" required placeholder="Enter Your Registration Number">
+              <input id="regNo" type="text" name="regNo"  placeholder="Enter Your Registration Number">
               <label for="fullName">Full Name</label>
-              <input id="fullName" type="text" name="" required placeholder="Enter Your Full Name">
+              <input id="fullName" type="text" name="fullName" placeholder="Enter Your Full Name">
               <label for="email">Email</label>
-              <input id="email" type="email" name="email" required placeholder="Your Email address">
+              <input id="email" type="email" name="email"  placeholder="Your Email address">
               <label for="Password">Password:</label>
-                <input type="Password" min="8" name="password" required placeholder="**************">
+                <input type="Password" min="8" name="password" placeholder="**************">
               <label for="rePassword">Re-enter Password:</label>
-                <input type="Password" name="password" required placeholder="**************"> 
+                <input type="Password" name="repassword"  placeholder="**************"> 
               <div><label>I agree to the terms and conditions: <input id="check" type="checkbox" name="agree" value="Yes"></label></div>
             
-                <input type="submit" name="" value="Sign Up">
+                <input type="submit" name="submit" value="Sign Up">
               
                 <hr>
+				
             </form>
           </div>
     
