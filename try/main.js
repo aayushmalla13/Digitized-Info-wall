@@ -65,3 +65,13 @@ $(".PostE").on("click",function(){
 
 
 });
+
+
+
+$(".navbar-toggler").on("click",function(){
+
+	console.log("clicked");
+	$(".grid-container").toggleClass("grd");
+});
+
+

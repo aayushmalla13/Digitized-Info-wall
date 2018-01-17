@@ -1,13 +1,13 @@
 .item1 { grid-area: uploader;
-    height: 400px;
+    
  }
 .item2 { grid-area: Events;
     
      
 }
 .item3 { grid-area: View;
-    height: 1000px;
     
+   
  }
 .item4 { grid-area: Recent;
  }
@@ -17,14 +17,16 @@
 }
 
 .grid-container {
+   
   display: grid;
   grid-template-areas:
     'Events Events uploader uploader uploader uploader Recent Recent'
     'Events Events uploader uploader uploader uploader Recent Recent'
     'Notes Notes View View View View Calendar Calendar'
     'Notes Notes View View View View Calendar Calendar';
-  grid-gap: 10px;
+  grid-gap: 4px;
   background-color: grey;
+  z-index: -1;
 
 }
 .grid-container  div {
@@ -196,7 +198,7 @@ background-color: #f44336;
 
 
 .uploadnote{
-    margin-top: 5.5%;
+    margin-top: 5%;
     margin-left: 50%;
     background-color: #4CAF50;
     color: white; 
@@ -209,8 +211,8 @@ background-color: white;
     
 }
 .browsenote{
-    margin-top: 5%;
-    margin-left: 32%;
+    margin-top: 2%;
+    margin-left: 25%;
     background-color: #4CAF50;
     color: white; 
     border: 2px solid #4CAF50;
@@ -270,4 +272,13 @@ background-color: white;
 ul{
     list-style: none;
     
+}
+.grd{
+
+    padding-top: 152px;
+}
+@media screen and (min-width:1908px){
+    .grid-container{
+        padding-top: 0px;  
+    }   
 }

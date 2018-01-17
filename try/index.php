@@ -3,11 +3,13 @@
 <head>
   <title>Main</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <script type="text/javascript" src="jquery.js"></script>
+ 
   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" type="text/css" href="index.css">
   
-  <style type="text/css">.size{height: 80px;}</style>
+  <style type="text/css">.size{height: 69px;}</style>
 </head>
 <body>
 
@@ -27,7 +29,7 @@
           <h2 class="askinghead">What Would you like to do?</h2>
           <div class="options">
             <div class="brief addnotes"><h4>You can add Notes</h4></div>
-            <div class="brief postevents"><h4>You can Post Events</h4></div>
+            <div class="brief postevents"><h4>You can post Events</h4></div>
             <div class="brief postannouncments"><h4>Post Announcments</h4></div>
           </div>
 
@@ -80,7 +82,7 @@
 
   
   <div class="item2">
-    <h4 style="color: #f44336">Events & Announcments</h4>
+     <h4 style="color: #f44336">Events <span style="color: black">&</span> <span style="color:#6c6c6d">Announcments</span></h4>
       <ul class="EA">
         
 
