@@ -1,9 +1,4 @@
-<?php
-if(isset($_POST['submit']))
-	
-mail($_POST["email"], 'Registration Success', 'Thanks for registering with digitized info wall','From: digitizedinfowall@gmail.com');
 
-?>
 <!DOCTYPE html>
 <html>
 <head>
