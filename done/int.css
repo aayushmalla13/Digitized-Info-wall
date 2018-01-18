@@ -1,0 +1,288 @@
+
+.item1 { grid-area: uploader;
+    
+ }
+.item2 { grid-area: Events;
+    
+     
+}
+.item3 { grid-area: View;
+    
+   
+ }
+.item4 { grid-area: Recent;
+ }
+.item5 { grid-area: Calendar; 
+}
+.item6 { grid-area: Notes; 
+}
+
+.grid-container {
+   
+  display: grid;
+  grid-template-areas:
+  
+    'Events Events uploader uploader uploader uploader Recent Recent'
+    'Events Events uploader uploader uploader uploader Recent Recent'
+    'Notes Notes View View View View Calendar Calendar'
+    'Notes Notes View View View View Calendar Calendar';
+  grid-gap: 4px;
+  grid-gap-top:0;
+  background-color: grey;
+  z-index: -1;
+
+}
+.grid-container  div {
+  
+  background-color: white;
+ 
+  
+}
+button,input[type="button"] {
+     /* Green */
+    border: none;
+    
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration:0.4s;
+}
+input[type="file"]{
+    border: none;
+    
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    cursor: pointer;
+    transition-duration:0.4s;
+
+}
+.Notes{
+    margin-left: 33%;
+    background-color: #4CAF50;
+    color: white; 
+    border: 2px solid #4CAF50;
+
+
+}
+.Notes:hover{
+    background-color: white; 
+    color: black;
+    
+
+}
+.Events{
+    background-color: #f44336;
+    color: white; 
+    border: 2px solid #f44336;
+
+ 
+}
+.Events:hover{
+    
+    background-color: white; 
+    color: black; 
+
+}
+.Announcements{
+    color: white;
+    background-color: #6c6c6d;
+    border: 2px solid #6c6c6d;
+    
+
+}
+.Announcements:hover{
+    background-color: white;
+    color: black;
+    
+
+}
+.buttoncollection{
+    
+
+}
+.askinghead{
+
+    color: grey;
+    font-size: 40px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.10);
+                 margin-top: 3%;
+                 margin-left: 31%;
+}
+.brief{
+    
+    display: inline-block;
+    margin-top: 5%;
+    height: 80px;
+    padding-top: 1.5%;
+    
+}
+.addnotes 
+{   
+    background-color: #4CAF50;
+    color: white; 
+    border: 3px solid #4CAF50;
+
+    margin-left: 22%;
+}
+.addnotes h4{
+    background-color: #4CAF50;
+    font-size: 25px;
+}
+
+.postannouncments{
+    background-color: #6c6c6d;
+    border: 3px solid #6c6c6d;
+
+}
+.postannouncments h4{
+    background-color: #6c6c6d;
+    font-size: 25px;
+}
+.postevents{
+background-color: #f44336;
+    color: white; 
+    border: 3px solid #f44336;
+}
+.postevents h4{
+    background-color:#f44336;
+    font-size: 25px; 
+}
+.item1-contain(){
+    
+}
+.PostE{
+    margin-top: 2%;
+    margin-left: 70%;
+
+    background-color: #f44336;
+    color: white; 
+    border: 2px solid #f44336;
+
+}
+.PostE:hover{
+    background-color: white; 
+    color: black; 
+}
+.PostA{
+    margin-top: 2%;
+    margin-left: 70%;
+    background-color: #6c6c6d;
+    color: white; 
+    border: 2px solid #6c6c6d;
+
+}
+.PostA:hover{
+    background-color: white; 
+    color:black; 
+}
+
+.askingnote{
+    color: #4CAF50;
+    font-size: 40px;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+                 0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.10);
+                 
+                 margin-top: 5%;
+                 margin-left: 30%;
+
+                 
+}
+
+
+.uploadnote{
+    margin-top: 5%;
+    margin-left: 50%;
+    background-color: #4CAF50;
+    color: white; 
+    border: 2px solid #4CAF50;
+
+}
+.uploadnote:hover{
+background-color: white; 
+    color: white;
+    
+}
+.browsenote{
+    margin-top: 2%;
+    margin-left: 25%;
+    background-color: #4CAF50;
+    color: white; 
+    border: 2px solid #4CAF50;
+
+}
+
+.eventh2{
+    margin-top: 5%;
+    margin-left:8%; 
+    padding-left: 2%;
+    font-weight: bold;
+    font-size: 24px;
+    color: #f44336;
+    width: 50%;
+
+}
+.eventinput{
+    border: none;
+    border-bottom: 1px solid #f44336;
+    background-color:; 
+    outline: none;
+    height: 40px;
+    color:#f44336 ;
+    font-size: 18px;
+    width: cover;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: 10%;
+
+}
+
+.announcmenth2{
+    margin-top: 5%;
+    margin-left:8%; 
+    padding-left: 2%;
+    font-weight: bold;
+    font-size: 22px;
+    color: #6c6c6d;
+    width:50%;
+
+}
+
+.announcmentinput{
+    border: none;
+    border-bottom: 1px solid #6c6c6d;
+    background-color:; 
+    outline: none;
+    height: 40px;
+    color:#6c6c6d ;
+    font-size: 18px;
+    width: cover;
+    width: 50%;
+    margin-right: 50%;
+    margin-left: 10%;
+
+}
+ul{
+    list-style: none;
+    
+}
+.grd{
+
+    padding-top: 152px;
+    z-index: 1;
+}
+@media screen and (min-width:1908px){
+    .grid-container{
+        padding-top: 0px;  
+    }   
+}
