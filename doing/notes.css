@@ -1,0 +1,30 @@
+.loginBox{
+	
+
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	background: rgba(0,0,0,.5);
+	
+	box-sizing: border-box
+	width: 700px;
+	height: 650px;}
+
+
+	h2
+{
+	margin: 0;
+	padding: 10px 20px;
+	color: white;
+	text-align: center;
+	border-bottom: 2px solid #fff;
+	margin-bottom: 30px;
+	font-family: Rajdhani;
+	font-size: 75px;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+				 0px 8px 13px rgba(0,0,0,0.1),
+				 0px 18px 23px rgba(0,0,0,0.10);
+	
+	border-top: 7px;
+	background: #2980b9;
+	font-weight: bolder;
+
+}
