@@ -454,4 +454,5 @@ ul{
 .eventsandannouncecoll{
 	overflow: hidden;
 	margin-bottom: 2px;
+	overflow-y: auto;
 }
