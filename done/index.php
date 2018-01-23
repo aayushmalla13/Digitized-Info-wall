@@ -20,8 +20,8 @@
 
 <div class="row">
 
-  <div class="item2 col-lg-3">
-    <h4 style="color: #f44336">Events <span style="color: black">&</span> <span style="color:#6c6c6d">Announcments</span></h4>
+  <div class="item2 col-lg-3 col-md-3">
+    <a href="#"><h4 style="color: #f44336">Events <span style="color: black">&</span> <span style="color:#6c6c6d">Announcements</span></h4></a>
       <ul class="eventsandannouncecoll">
         
         
@@ -35,7 +35,7 @@
 
   </div>
 
-  	<div class="item1 col-lg-6">
+  	<div class="item1 col-lg-6 col-md-6">
   		<div class="buttoncollection">
   			<button type="submit" class="Notes">Notes</button>
   			<button type="submit" class="Events">Events</button>
@@ -113,7 +113,7 @@
     </div>
   	
 
-<div class="item4 col-lg-3">
+<div class="item4 col-lg-3 col-md-3">
       <h4>Recent Activities</h4>
 
 
@@ -122,10 +122,10 @@
   
  </div>
  <div class="row"> 
-  <div class="item6 col-lg-3">Notes</div>
-  	<div class="item3 col-lg-6">View</div>  
+  <div class="item6 col-lg-3 col-md-3">Notes</div>
+  	<div class="item3 col-lg-6 col-md-6">View</div>  
   	
-  	<div class="item5 col-lg-3">Calendar</div>
+  	<div class="item5 col-lg-3 col-md-3">Calendar</div>
   	
   </div>
   	
