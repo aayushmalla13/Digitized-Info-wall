@@ -53,12 +53,12 @@ $(".PostA").on("click",function(){
 	var Eventitem=item.fontcolor("#6c6c6d");
 	$(".eventsandannouncecoll").prepend('<li><a href="#"><span class="tab">'+Eventitem+'</span></a></li>');
 	$(".announcmentinput").val('');
-	 noofli=$(".eventsandannouncecoll li");
+	/* noofli=$(".eventsandannouncecoll li");
 	console.log(noofli.length);
 	if(controller===1){
 		showmore();
 	}
-	
+	*/
 
 
 
@@ -69,13 +69,13 @@ $(".PostE").on("click",function(){
 	var Eventitem=item.fontcolor("#f44336");
 	$(".eventsandannouncecoll").prepend('<li><a href="#"><span class="tab">'+"- "+Eventitem+'</span></a></li>');
 	$(".eventinput").val('');
-	 noofli=$(".eventsandannouncecoll li");
+	/* noofli=$(".eventsandannouncecoll li");
 	console.log(noofli.length);
 	if(controller===1){
 
 	showmore();
 
-		}
+		}*/
 
 });
 console.log($(window).width());
@@ -96,10 +96,10 @@ console.log($(window).width());
 
 
 
-function showmore(){
+/*function showmore(){
 	if(noofli.length>18){
 		
 		$("ul").append('<li><a href="#"><span class="tab">See More</span></a></li>');
 		controller=2;
 	}
-}
+}*/
