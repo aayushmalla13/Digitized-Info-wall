@@ -8,6 +8,7 @@
 .item2 { grid-area: Events;
 		border-right: 1px solid black;
 		border-bottom: 1px solid black;
+		overflow-y: auto;
 	 
 }
 .item3 { grid-area: View;
@@ -454,5 +455,4 @@ ul{
 .eventsandannouncecoll{
 	overflow: hidden;
 	margin-bottom: 2px;
-	overflow-y: auto;
 }
