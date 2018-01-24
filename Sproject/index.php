@@ -1,3 +1,86 @@
+<?php
+//echo "clicked";
+//Requires session to open join r create group
+if(isset($_POST['login']))
+{
+	$user="root";
+$pass='';
+
+	$password = $_POST['password'];
+	$email = $_POST['email'];
+	$group_code = $_POST['group_code'];
+	//$name = $_POST['']; //As student or teacher
+
+	
+	$db='user_registration';
+$conn = mysqli_connect('localhost', $user, $pass, $db);
+$sql = "SELECT GName, group_code FROM groups WHERE group_code = '$group_code' ";
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0)
+	
+{
+	
+	   $row = $result->fetch_assoc() ;//As group_code is unique
+        $group_insert =  $row['GName']; //Extract associated groupname
+	
+			///Finding input email in particular group
+$db='CreateGroup';
+$conn = mysqli_connect('localhost', $user, $pass, $db);
+$sql = "SELECT Email FROM $group_insert WHERE Email = '$email' ";
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0)
+{
+	
+	echo "Found associated email";
+	
+	
+	
+	
+	///Check validity and credentials
+	///Check if email exists and is verified
+$db='user_registration';
+$conn = mysqli_connect('localhost', $user, $pass, $db);
+//$//db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+$sql = "SELECT Email, password, verified FROM registration WHERE Email = '$email' and password = '$password' and verified = '1'";
+
+$result = mysqli_query($conn, $sql);
+	if (mysqli_num_rows($result) > 0) { //If email exists and is 
+//////////		
+		echo "enter to main ui page";
+		
+		
+		
+	}
+	else
+		echo "\n Credentials wrong or email may not be verified";
+	
+	
+	
+	//////////
+}
+	else
+		echo "No associated email found";
+	
+	
+	
+}
+
+else
+	echo "No associate group found for input group code. Check and retry";
+	
+	/////Finding email////
+
+}
+	
+	
+?>
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -49,18 +132,16 @@
               <h2>Login</h2>
               <form method="post" action="">
                 <label for="groupcode">Group Code</label>
-                <input id="groupcode" type="text" name="" required placeholder="Enter Group">
+                <input id="groupcode" type="text" name="group_code" required placeholder="Enter Group">
 
-                <label for="username">Username</label>
-                <input id="username" type="text" name="" required="" placeholder="Ex:Jhonplayer">
+                
               
                 <label for="email">Email</label>
                 <input id="email" type="email" name="email" required placeholder="Your Email address">
-                <label for="groupcode">Group Code</label>
-                <input id="groupcode" type="text" name="" required placeholder="Enter Group">
+                
                 <label for="Password">Password:</label>
                 <input type="Password" name="password" required placeholder="**********"> 
-                <input type="submit" name="" value="Log In">
+                <input type="submit" name="login" value="Log In">
 
                 <hr>
               </form>

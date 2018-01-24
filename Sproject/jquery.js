@@ -10,9 +10,7 @@
  * https://jquery.org/license
  *
  * Date: 2017-03-20T18:59Z
-
  */
- console.log("Connected Aayush");
 ( function( global, factory ) {
 
 	"use strict";

@@ -1,8 +1,8 @@
 <?php
 
-if(isset($_POST['submit']))
-{$email =  $_POST['email'];
-$code = $_POST['code'];
+if(isset($_GET['submit']))
+{$email =  $_GET['email'];
+$code = $_GET['code'];
 $user="root";
 $pass='';
 $db=new mysqli('localhost', $user, $pass, 'user_registration') or die("Unable to connect");
@@ -20,7 +20,12 @@ $sql = "SELECT email, verifycode, verified FROM registration where email = '$ema
 	if (mysqli_query($db, $sql)) 
 	{
 	
-		echo "Verify vayo";
+		echo "Verify vayo. Redirecting to home page in 5 secs";
+		//echo "<script> alert('Email verified successfully'); </script>";
+		//sleep(500);
+		header("Location: http://localhost/pro/Sproject/"); //Redirect to hompage
+		exit();
+		 
 	}
  else
 	 echo "Vayena";
@@ -47,7 +52,7 @@ $sql = "SELECT email, verifycode, verified FROM registration where email = '$ema
 	
 	
 	
-	<form action="" method="post">
+	<form action="" method="get">
 
 E-mail: <input type="text" name="email"><br>
 Code: <input type="text" name="code"><br>	

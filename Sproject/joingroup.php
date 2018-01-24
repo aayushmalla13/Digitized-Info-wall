@@ -1,8 +1,123 @@
+<?php
+//echo "clicked";
+//Requires session to open join r create group
+if(isset($_POST['submit']))
+{
+	$user="root";
+$pass='';
+
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$group_code = $_POST['group_code'];
+	//$name = $_POST['']; //As student or teacher
+
+	
+	$db='user_registration';
+$conn = mysqli_connect('localhost', $user, $pass, $db);
+$sql = "SELECT GName, group_code FROM groups WHERE group_code = '$group_code' ";
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0)
+	
+{
+	
+	   $row = $result->fetch_assoc() ;//As group_code is unique
+        $group_insert =  $row['GName']; //Extract associated groupname
+	
+	
+	
+	
+	
+	///Check if email exists and is verified
+	$db='user_registration';
+$conn = mysqli_connect('localhost', $user, $pass, $db);
+//$//db = new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+$sql = "SELECT Email, verified FROM registration WHERE Email = '$email' and verified = '1'";
+
+$result = mysqli_query($conn, $sql);
+	if (mysqli_num_rows($result) > 0) { //If email exists and is verified insert data into particular group
+		
+	//Inserting into particular group based on group code
+$db='CreateGroup';
+$db=new mysqli('localhost', $user, $pass, $db) or die("Unable to connect");
+$sql = "INSERT INTO $group_insert  (Name, Email, Role)
+VALUES ('$name', '$email', '0')";
+//echo $sql;
+if ($db->query($sql) === TRUE) {
+    //
+} else {
+    echo "Error: " . $sql . "<br>" . $db->error;
+}
+//////////		
+		
+		
+		
+		
+	}
+	
+	else {
+    echo "Email is either not verified or you'vent created account yet. To crete your account go here";
+	 echo '<a href="http://localhost/pro/Sproject/verify.php"> Click here to verify your account</a>';
+}
+	
+	
+	
+	
+	
+	
+	////
+	
+	
+	
+	
+	
+	
+}
+	else
+		echo "Group Code not valid. Please Contact your group Creator";
+	
+	
+	
+	
+
+	//Groups vanney table bata groupcode linxu..ani tyo group code ko corresponding groupname wala table bata find the email .Then tyo email ko lagi registration bata password khojney
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+}
+
+?>
+
+
+
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Create Your Group</title>
+		<title>Join Group</title>
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -22,84 +137,22 @@
 						<h2> Join Your Group</h2>
 						<form method="post" action="">
 							<label for="username">Your Name</label>
-							<input id="username" type="text" name="" required="" placeholder="Full Name">
+							<input id="username" type="text" name="name" required="" placeholder="Full Name">
 							
 							<label for="email">Email</label>
 							<input id="email" type="email" name="email" required placeholder="Your Email address">
 							<label for="groupcode">Group Code</label>
-							<input id="groupcode" type="text" name="" required placeholder="Enter Group"> 
-							<label for="date">Date OF Birth:</label>
-								<select name=month>
-									<option>january</option>
-									<option>February</option>
-									<option>March</option>
-									<option>April</option>
-									<option>May</option>
-									<option>June</option>
-									<option>July</option>
-									<option>August</option>
-									<option>September</option>
-									<option>October</option>
-									<option>November</option>
-									<option>December</option>
-								</select>
-								<select name="day">
-									<option>1</option>
-									<option>2</option>
-									<option>3</option>
-									<option>4</option>
-									<option>5</option>
-									<option>6</option>
-									<option>7</option>
-									<option>8</option>
-									<option>9</option>
-									<option>10</option>
-									<option>11</option>
-									<option>12</option>
-									<option>13</option>
-									<option>14</option>
-									<option>15</option>
-									<option>16</option>
-									<option>17</option>
-									<option>18</option>
-									<option>19</option>
-									<option>20</option>
-									<option>21</option>
-									<option>22</option>
-									<option>23</option>
-									<option>24</option>
-									<option>25</option>
-									<option>26</option>
-									<option>27</option>
-									<option>28</option>
-									<option>29</option>
-									<option>30</option>
-
-
-								</select>
-								<select name="year">
-									<option>1990</option>
-									<option>1991</option>
-									<option>1992</option>
-									<option>1993</option>
-									<option>1994</option>
-									<option>1995</option>
-									<option>1996</option>
-									<option>1997</option>
-									<option>1998</option>
-									<option>1999</option>
-									<option>2000</option>
-								</select>
-							<hr>
+							<input id="groupcode" type="text" name="group_code" required placeholder="Enter Group"> 
+							
 							<p>Joining The Group as:</p>
 							<label id="te" for="Teacher">Teacher:</label>
-							<input id="Teacher"type="radio" name="stchoice" required value="T">
+							<input id="Teacher"type="radio" name="stchoice">
 							<label id="st" for="Student">Student:</label>
-							<input id="Student"type="radio" name="stchoice" required value="S">
+							<input id="Student"type="radio" name="stchoice" >
 							<hr>
-							<div><label>I agree to the terms and conditions: <input id="check" type="checkbox" name="agree" required value="Yes"></label></div>
+							<div><label>I agree to the terms and conditions: <input id="check" type="checkbox" name="agree"></label></div>
 
-							<input type="submit" name="" value="Sign In">
+							<input type="submit" name="submit" value="Sign In">
 
 						</form>
 					</div>

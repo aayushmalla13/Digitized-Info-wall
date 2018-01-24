@@ -1,0 +1,13 @@
+while creating group:
+	if email exits and verified
+check if fields are empty and pass and repass are same
+if email already registered during signup -->
+send mail hyperlink
+ailey lai sab student xa
+Check if group code is already useed
+
+making all fields required
+check boxes
+
+signup sakkexi forward to create / join group
+
